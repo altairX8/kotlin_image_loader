@@ -12,7 +12,7 @@ import retrofit2.http.GET
  */
 interface WallpaperAPI  {
 
-    @GET("/dark.json")
+    @GET("/enter ur method here")
     fun getWallpaperList(): Observable<WallpaperList>
 
     companion object Factory {
@@ -20,7 +20,7 @@ interface WallpaperAPI  {
             val retrofit = Retrofit.Builder()
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl("https://beautiful-7f3fc.firebaseapp.com")
+                    .baseUrl("enter you URL here")
                     .build()
 
             return retrofit.create(WallpaperAPI ::class.java)
